@@ -1,0 +1,281 @@
+.root {
+    -bg: #1E2A31;
+    -fg: #2B3942;
+    -fg2: #2e3e47;
+    -hovered: #006B7D;
+    -clicked: #138496;
+    -promt: #778797;
+    -text: #c3d3e3;
+    -shade: #111D24;
+}
+
+/*.root {
+    -bg: #525252;
+    -fg: #666666;
+    -fg2: #6d6d6d;
+    -clicked: #2f6d4f;
+    -hovered: #295f40;
+    -promt: #939393;
+    -text: #c3c3c3;
+    -shade: #333333;
+}*/
+
+.masker-pane .label {
+    -fx-text-fill: -text;
+    -fx-wrap-text: true;
+    -fx-text-alignment: center;
+}
+
+.big-button {
+    -fx-focus-traversable: false;
+    -fx-font-family: Corbel, System;
+    -fx-font-weight: bold;
+    -fx-min-width: 160;
+    -fx-min-height: 36;
+    -fx-background-color: -fg;
+    -fx-text-fill: -text;
+    -fx-font-size: 14;
+    -fx-effect: dropshadow(GAUSSIAN, -shade, 8, 0, 0, 0);
+}
+
+.big-button:hover {
+    -fx-background-color: -hovered;
+}
+
+.big-button:armed {
+    -fx-background-color: -clicked;
+    -fx-border-color: -clicked;
+    -fx-border-radius: 3;
+}
+
+.big-button-small {
+    -fx-focus-traversable: false;
+    -fx-font-family: Corbel, System;
+    -fx-font-weight: bold;
+    -fx-min-width: 36;
+    -fx-max-width: 36;
+    -fx-min-height: 36;
+    -fx-background-color: -fg;
+    -fx-text-fill: -text;
+    -fx-font-size: 14;
+    -fx-effect: dropshadow(GAUSSIAN, -shade, 8, 0, 0, 0);
+}
+
+.big-button-small:hover {
+    -fx-background-color: -hovered;
+}
+
+.big-button-small:armed {
+    -fx-background-color: -clicked;
+    -fx-border-color: -clicked;
+    -fx-border-radius: 3;
+}
+
+.settings-button {
+    -fx-focus-traversable: false;
+    -fx-font-family: Corbel, System;
+    -fx-font-weight: bold;
+    -fx-min-width: 8;
+    -fx-max-width: 8;
+    -fx-min-height: 36;
+    -fx-background-color: derive(-fg, 15%);
+    -fx-text-fill: -text;
+    -fx-font-size: 10;
+    -fx-background-radius: 0 3 3 0;
+    -fx-border-radius: 0 3 3 0;
+}
+
+.settings-button:hover {
+    -fx-background-color: -hovered;
+}
+
+.settings-button:armed {
+    -fx-background-color: -clicked;
+    -fx-border-color: -clicked;
+    -fx-background-radius: 0 3 3 0;
+    -fx-border-radius: 0 3 3 0;
+}
+
+.big-text-field {
+    -fx-focus-traversable: false;
+    -fx-font-family: Corbel, System;
+    -fx-font-weight: bold;
+    -fx-min-height: 36;
+    -fx-background-color: -fg;
+    -fx-accent: -hovered;
+    -fx-prompt-text-fill: -promt;
+    -fx-text-fill: -text;
+    -fx-font-size: 14;
+    -fx-effect: dropshadow(GAUSSIAN, -shade, 8, 0, 0, 0);
+}
+
+.check-box {
+    -fx-font-family: Corbel, System;
+    -fx-font-weight: bold;
+    -fx-focus-traversable: false;
+
+    -fx-text-fill: -text;
+    -fx-font-size: 14;
+}
+
+.check-box .box {
+    -fx-background-color: -fg;
+    -fx-border-radius: 5;
+    -fx-effect: dropshadow(GAUSSIAN, -shade, 6, 0, 0, 0);
+}
+
+.check-box:disabled .box {
+    -fx-background-color: red;
+    -fx-border-radius: 5;
+    -fx-effect: dropshadow(GAUSSIAN, -shade, 8, 0, 0, 0);
+}
+
+.check-box:selected .mark {
+    -fx-background-color: -text;
+}
+
+.table-view {
+    -fx-focus-traversable: false;
+    -fx-font-family: Corbel, System;
+    -fx-font-weight: bold;
+    -fx-text-fill: -text;
+    -fx-background-color: -fg;
+    -fx-effect: dropshadow(GAUSSIAN, -shade, 8, 0, 0, 0);
+    -fx-background-radius: 4;
+    -fx-padding: 4 0 4 0;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: -fg;
+    -fx-border-width: 0 0 2 0;
+    -fx-border-color: transparent transparent -promt transparent;
+    -fx-background-radius: 5;
+    -fx-padding: 3 0 5 0;
+}
+
+.table-view .column-header-background .filler {
+    -fx-background-color: -fg;
+    -fx-border-width: 0 0 0 0;
+    -fx-border-color: transparent transparent -promt transparent;
+    -fx-background-radius: 5;
+    -fx-max-width: 0;
+}
+
+.table-view .column-header-background .label {
+    -fx-background-color: -fg;
+    -fx-text-fill: -text;
+    -fx-font-size: 13;
+    -fx-background-radius: 5;
+    /*-fx-alignment: CENTER_LEFT;*/
+    /*-fx-padding: 0 0 0 50;*/
+}
+
+.table-view .column-header {
+    -fx-background-color: -fg;
+    -fx-background-radius: 5;
+}
+
+.table-view .column-header .arrow {
+    -fx-background-color: -promt;
+}
+
+.table-view .table-cell {
+    -fx-alignment: CENTER-LEFT;
+    -fx-padding: 0 0 0 5;
+    -fx-min-height: 35;
+    -fx-text-fill: -text;
+    -fx-border-color: transparent;
+}
+
+.table-row-cell {
+    -fx-background-color: -fg2;
+    -fx-font-family: Corbel;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: -fg;
+    -fx-font-family: Corbel;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: -hovered;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: -clicked;
+}
+
+.table-view *.scroll-bar:horizontal *.increment-button,
+.table-view *.scroll-bar:horizontal *.decrement-button {
+    -fx-background-color: null;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+.table-view *.scroll-bar:horizontal *.increment-arrow,
+.table-view *.scroll-bar:horizontal *.decrement-arrow {
+    -fx-background-color: null;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+    -fx-shape: null;
+}
+
+.table-view *.scroll-bar:vertical {
+    -fx-background-color: -fg;
+    -fx-background-insets: 0 0 -4 0;
+    -fx-padding: 0 0 -4 0;
+    -fx-background-radius: 0 0 3 0;
+}
+
+.table-view *.scroll-bar:vertical *.thumb {
+    -fx-background-color: -promt;
+    -fx-background-radius: 0;
+}
+
+.table-view *.scroll-bar:vertical *.increment-button,
+.table-view *.scroll-bar:vertical *.decrement-button {
+    -fx-padding: 0 7 0 0;
+}
+
+.table-view *.scroll-bar:vertical *.increment-arrow,
+.table-view *.scroll-bar:vertical *.decrement-arrow {
+    -fx-shape: null;
+    -fx-padding: 0 7 0 0;
+}
+
+.separator *.line {
+    -fx-border-style: solid;
+    -fx-border-width: 0 0 2 0; /* its make really one-pixel-border */
+    -fx-border-color: -fg;
+}
+
+.status-text {
+    -fx-fill: -text;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(GAUSSIAN, -shade, 1, 0, 1, 1)
+}
+
+.info-text {
+    -fx-fill: -text;
+    -fx-font-weight: bold;
+}
+
+Text {
+    -fx-fill: -text;
+    -fx-font-family: Corbel, System;
+    -fx-font-size: 14;
+}
+
+HBox {
+    -fx-background-color: -bg;
+}
+
+VBox {
+    -fx-background-color: -bg;
+}
+
+.table-view:row-selection .placeholder .label {
+    -fx-text-fill: -text;
+}

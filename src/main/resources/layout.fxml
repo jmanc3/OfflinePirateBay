@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="689.0" prefWidth="979.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+    <children>
+        <VBox spacing="10.0" VBox.vgrow="ALWAYS">
+            <children>
+                <HBox spacing="14.0">
+                    <children>
+                        <TextField fx:id="searchField" onAction="#search" promptText="Torrent Name (Ctrl+L)" styleClass="big-text-field" HBox.hgrow="ALWAYS" />
+                        <HBox>
+                            <children>
+                                <Button fx:id="searchOffline" graphicTextGap="10.0" mnemonicParsing="false" onAction="#search" styleClass="big-button" text="Search" />
+                            </children>
+                        </HBox>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" spacing="14.0">
+                    <children>
+                        <CheckBox fx:id="caseSensitiveCheckBox" mnemonicParsing="false" text="Case Sensitive" />
+                        <CheckBox fx:id="regexCheckBox" mnemonicParsing="false" text="Regex" />
+                    </children>
+                    <VBox.margin>
+                        <Insets bottom="4.0" top="4.0" />
+                    </VBox.margin>
+                </HBox>
+                <HBox spacing="14.0" VBox.vgrow="ALWAYS">
+                    <children>
+                        <VBox spacing="10.0" HBox.hgrow="ALWAYS">
+                            <children>
+                                <StackPane fx:id="stackPanel" VBox.vgrow="ALWAYS">
+                                    <children>
+                                        <TableView fx:id="tableView" />
+                                    </children>
+                                </StackPane>
+                            </children>
+                        </VBox>
+                        <VBox spacing="12.0">
+                            <children>
+                        <StackPane>
+                           <children>
+                              <Button fx:id="openTorrentButton" graphicTextGap="10.0" mnemonicParsing="false" onAction="#openTorrent" styleClass="big-button" text="Open Torrent" />
+                                      <Button graphicTextGap="10.0" mnemonicParsing="false" onAction="#openTorrentSettings" styleClass="settings-button" StackPane.alignment="CENTER_RIGHT" />
+                           </children>
+                        </StackPane>
+                                <Button fx:id="copyMagnetButton" mnemonicParsing="false" onAction="#copyMagnet" styleClass="big-button" text="Copy Magnet" />
+                                <Button fx:id="copyInfoHashButton" mnemonicParsing="false" onAction="#copyInfoHash" styleClass="big-button" text="Copy Info Hash" />
+                                <Button fx:id="googleTorrentButton" mnemonicParsing="false" onAction="#googleTorrent" styleClass="big-button" text="Google Torrent" />
+                        <VBox alignment="BOTTOM_CENTER" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Button fx:id="updateButton" mnemonicParsing="false" onAction="#updateDump" styleClass="big-button" text="Dump Update" />
+                           </children>
+                        </VBox>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+            </children>
+            <padding>
+                <Insets bottom="14.0" left="14.0" right="14.0" top="14.0" />
+            </padding>
+        </VBox>
+        <VBox spacing="10.0" VBox.vgrow="NEVER">
+            <children>
+                <Separator prefWidth="200.0" />
+                <HBox>
+                    <children>
+                        <Text fx:id="statusText" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="status-text" text="Status: Idle" />
+                        <Pane minWidth="14.0" HBox.hgrow="ALWAYS" />
+                        <Text fx:id="tooltipsText" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="info-text" text="Tooltips" HBox.hgrow="ALWAYS" />
+                    </children>
+                </HBox>
+            </children>
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+            <padding>
+                <Insets bottom="10.0" left="14.0" right="14.0" />
+            </padding>
+        </VBox>
+    </children>
+</VBox>
